@@ -1,0 +1,38 @@
+# ملفات النظام
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.tmp
+
+# ملفات البناء
+*.deb
+*.changes
+*.dsc
+*.tar.gz
+*.tar.xz
+build/
+dist/
+*.egg-info/
+__pycache__/
+
+# ملفات مؤقتة
+*.log
+*.pid
+*.sock
+
+# ملفات النسخة الاحتياطية
+*.bak
+*.backup
+*~
+
+# ملفات النشر
+*.asc
+*.gpg
+
+# ملفات أخرى
+DEBIAN/md5sums.tmp
+*.pyc
+.pytest_cache/
