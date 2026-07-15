@@ -1,0 +1,15 @@
+Package: location-spoofer
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: تطوير التطبيقات <dev@example.com>
+Installed-Size: 1024
+Depends: firmware (>= 12.0)
+Homepage: https://github.com/teeqp30/Fake-
+Description: أداة لتزييف الموقع الجغرافي
+ تطبيق لتزييف إحداثيات GPS على أجهزة iOS
+ مفيد للاختبار والتطوير والخصوصية
+ .
+ Features:
+  - تزييف إحداثيات GPS
+  - حفظ مواقع مفضلة
+  - تشفير البيانات

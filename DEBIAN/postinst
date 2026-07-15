@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+
+echo "جاري تثبيت أداة تزييف الموقع..."
+
+# إنشاء المجلدات المطلوبة
+mkdir -p /var/mobile/Library/LocationSpoofer
+mkdir -p /var/mobile/Library/Preferences
+
+# إنشاء ملف الإعدادات الافتراضية
+cat > /var/mobile/Library/Preferences/com.locationspoofer.plist << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>SpoofEnabled</key>
+    <false/>
+    <key>LastUpdated</key>
+    <date>2026-07-15T00:00:00Z</date>
+</dict>
+</plist>
+EOF
+
+# تعيين الصلاحيات
+chmod 755 /opt/location-spoofer/* 2>/dev/null || true
+chown -R mobile:mobile /var/mobile/Library/LocationSpoofer 2>/dev/null || true
+
+echo "✅ تم التثبيت بنجاح!"
+echo "📍 الأداة جاهزة للاستخدام"
+
+exit 0

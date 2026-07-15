@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+echo "جاري إزالة أداة تزييف الموقع..."
+
+# حذف المجلدات والملفات المؤقتة
+rm -rf /var/mobile/Library/LocationSpoofer 2>/dev/null || true
+
+echo "✅ تم الحذف بنجاح!"
+
+exit 0
